@@ -64,6 +64,8 @@
     width: 170px; /* Adjusted to accommodate 110x110 logo */
     padding: 0;
     margin-left: 0;
+    transition: all 0.4s ease;
+
 }
 
 #navbar__logo img {
@@ -72,6 +74,10 @@
     object-fit: contain;
     margin: 0;
     padding: 0;
+}
+
+#navbar__logo:hover {
+    transform: scale(1.05);
 }
 
 .fa-gem {
