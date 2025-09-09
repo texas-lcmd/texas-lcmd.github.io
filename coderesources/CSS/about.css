@@ -118,7 +118,7 @@
   }
   
   /* Officer Cards */
-  .officer-cards-line1, .officer-cards-line2, .officer-cards-line3 {
+  .officer-cards-line1, .officer-cards-line2, .officer-cards-line3, .officer-cards-line4 {
   padding: 20px 15px;
   display: flex;
   flex-wrap: wrap;
