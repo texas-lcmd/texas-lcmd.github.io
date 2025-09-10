@@ -9,7 +9,7 @@
     }
     
 body {
-    background-color: var(--bg-color);
+    background-color: var(--navbar-color);
 }
 /* -------------------- */
 .banner {
@@ -39,6 +39,11 @@ body {
 
 .banner::after {
     bottom: 8px; /* Adjusted for smaller banner */
+}
+
+.global-gallery {
+    background-color: var(--bg-color);
+    padding-bottom: 50px;
 }
 
 /* Gallery container */
@@ -97,10 +102,6 @@ body {
   
 #modal-caption {
     text-align: center;
-}
-  
-.close {
-    
 }
 
 /* Responsive styles for gallery and footer */

@@ -12,7 +12,7 @@
   body {
   margin: 0;
   font-family: 'Space Mono', monospace;
-  background-color: var(--bg-color);
+  background-color: var(--navbar-color);
   }
   
   /* About Content */
@@ -70,6 +70,8 @@
   text-align: center;
   line-height: 1.6;
   padding: 0 10px;
+  margin-right: 120px;
+  margin-left: 120px;
   }
   
   /* Learn More Button */
@@ -116,6 +118,11 @@
   font-size: 1.2rem;
   color: white;
   }
+
+  .global-officer-cards {
+    background-color: var(--bg-color);
+    padding-bottom: 20px;
+  }
   
   /* Officer Cards */
   .officer-cards-line1, .officer-cards-line2, .officer-cards-line3, .officer-cards-line4 {
@@ -128,6 +135,10 @@
   margin: 0 auto;
   background-color: var(--bg-color);
   }
+
+  .officer-cards-line4 {
+    margin-bottom: 40px;
+  }
   
   .officer-card {
   flex: 1 1 150px;
@@ -139,10 +150,16 @@
   transition: background-color 0.3s ease-in;
   margin: 0;
   min-width: 150px;
+  border: var(--text-color) 2px solid;
   }
   
   .officer-card:hover {
   background-color: var(--primary-color);
+  border: white 2px solid;
+  color: white;
+    .officer-photo {
+      border: white 2px solid;
+    }
   }
   
   .officer-photo {
@@ -150,6 +167,7 @@
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
+  border: var(--text-color) 2px solid;
   }
   
   .officer-card h3 {

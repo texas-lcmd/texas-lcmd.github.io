@@ -16,7 +16,7 @@
 }
 /* -------------------- */
 body {
-    background-color: var(--bg-color);
+    background-color: var(--navbar-color);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
