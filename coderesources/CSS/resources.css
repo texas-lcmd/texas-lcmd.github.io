@@ -57,6 +57,8 @@
     flex-direction: column;
     width: 90%;
     margin: 20px auto;
+    margin-bottom: 100px;
+    margin-top: 70px;
     background-color: var(--bg-color);
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     flex: 1;
@@ -104,7 +106,19 @@
     margin-bottom: 30px;
     text-align: center;
   }
- 
+
+  #ambassador a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  #ambassador a:hover {
+    transition: text-decoration 0.3s;
+    text-decoration: underline;
+    color: white;
+  }
+
   .right-section .content-item h2 {
     font-size: 1.8rem;
     color: var(--text-color);
@@ -197,10 +211,18 @@
     transition: background-color 0.3s ease;
     text-decoration: none;
     color: inherit;
+    border: var(--text-color) 2px solid;
   }
   
   .meeting-card:hover {
     background-color: var(--primary-color);
+    border: white 2px solid;
+     h3 {
+      color: white;
+    }
+     img {
+      border: white 2px solid;
+     }
   }
   
   .meeting-card h3 {

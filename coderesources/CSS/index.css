@@ -1,10 +1,28 @@
-* {
-  box-sizing: border-box;
-  font-size: 16;
-}
+/* ---------- Base Variables & Global Styles ---------- */
+:root {
+    --primary-color: #bd724a;
+    --secondary-color: #6c584c;
+    --text-color: #2e1f15;
+    --bg-color: #f4e4d4;
+    --accent-bg: #745644;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--accent-bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
 
 .banner {
-  background-color: #bd724a; /*LCMD Banner */
+  background-color: var(--primary-color);
   color: white;
   font-weight: bold;
   font-size: 2rem;
