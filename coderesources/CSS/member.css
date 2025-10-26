@@ -1,0 +1,171 @@
+/* ---------- Base Variables & Global Styles ---------- */
+/*color pallete*/
+:root {
+    --primary-color: #bd724a;
+    --secondary-color: #6c584c;
+    --text-color: #2e1f15;
+    --bg-color: #f4e4d4;
+    --navbar-color: #745644;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Host Grotesk', Courier, monospace;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+}
+
+.banner {
+    background-color: var(--primary-color); /*LCMD Banner */
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem; /* Slightly smaller than index page */
+    text-align: center;
+    padding: 15px; /* Slightly smaller padding */
+    font-family: 'Oswald', sans-serif !important;
+    position: relative;
+}
+
+.banner::before,
+.banner::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px; /* Slightly thinner lines */
+    background-color: white;
+}
+
+.banner::before {
+    top: 8px; /* Adjusted for smaller banner */
+}
+
+.banner::after {
+    bottom: 8px; /* Adjusted for smaller banner */
+}
+
+/* ---------- Member resources password prompt styles ---------- */
+#passwordPrompt {
+    max-width: 520px;
+    margin: 40px auto;
+    background: var(--text-color);
+    border: 1px solid var(--secondary-color);
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(46,31,21,0.12);
+    text-align: center;
+}
+
+#passwordPrompt h2 {
+    color: #fff;
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+#passwordPrompt form {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+#passwordPrompt input[type="password"] {
+    width: 100%;
+    max-width: 320px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--secondary-color);
+    font-size: 1rem;
+    color: var(--text-color);
+    outline: none;
+    transition: box-shadow 0.15s ease, border-color 0.15s ease;
+    background: #fff;
+}
+
+#passwordPrompt input[type="password"]:focus {
+    box-shadow: 0 4px 12px rgba(189,114,74,0.12);
+    border-color: var(--primary-color);
+}
+
+#passwordPrompt button[type="submit"] {
+    background: var(--primary-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.12s ease, background 0.12s ease;
+}
+
+#passwordPrompt button[type="submit"]:hover {
+    transform: translateY(-1px);
+    background: var(--secondary-color);
+}
+
+#errorMessage {
+    display: none; /* toggled by JS */
+    margin-top: 12px;
+    padding: 8px 12px;
+    background: #ff6b6b;
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#protectedContent {
+    display: none; /* still hidden until correct password */
+    max-width: 900px;
+    margin: 32px auto;
+    padding: 20px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+@media (max-width: 480px) {
+    #passwordPrompt {
+        margin: 24px 16px;
+        padding: 18px;
+    }
+
+    #passwordPrompt form {
+        flex-direction: column;
+    }
+
+    #passwordPrompt button[type="submit"] {
+        width: 100%;
+    }
+}
+
+/* Reveal animation for protected content */
+#protectedContent.hidden {
+    display: none;
+}
+
+#protectedContent.reveal {
+    animation: fadeInUp 420ms cubic-bezier(.2,.9,.2,1) forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.995);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
