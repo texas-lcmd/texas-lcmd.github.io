@@ -169,3 +169,87 @@ body {
         transform: translateY(0) scale(1);
     }
 }
+
+/* Tab Styles */
+.tabs-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    background: var(--secondary-color);
+    padding: 1rem 1rem 0;
+    gap: 0.5rem;
+}
+
+.tab-button {
+    padding: 1rem 2rem;
+    border: none;
+    background: transparent;
+    color: rgba(255,255,255,0.8);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+    color: white;
+    background: rgba(255,255,255,0.1);
+}
+
+.tab-button.active {
+    background: white;
+    color: var(--primary-color);
+}
+
+.tab-content {
+    padding: 2rem;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.tab-panel h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.tab-panel p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .tab-button {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .tab-content {
+        padding: 1.5rem;
+    }
+}

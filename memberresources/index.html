@@ -121,10 +121,40 @@
 
     <div id="protectedContent">
         <h1>Welcome to the LCMD Member Resources!</h1>
-        <p>This is the secret information you can only see with the correct password.</p>
+        <div class="tabs-container">
+            <div class="tabs">
+                <button class="tab-button active" data-tab="general">General Resources</button>
+                <button class="tab-button" data-tab="documents">Calendar</button>
+                <button class="tab-button" data-tab="meetings">Meeting Slides</button>
+                <button class="tab-button" data-tab="training">Training Materials</button>
+            </div>
+            
+            <div class="tab-content">
+                <div class="tab-panel active" id="general">
+                    <h2>General Resources</h2>
+                    <p>Welcome to LCMD's member resources section. Here you'll find important information and tools to support your work with our organization.</p>
+                </div>
+                
+                <div class="tab-panel" id="documents">
+                    <h2>Important Documents</h2>
+                    <p>Access our organization's key documents and forms here.</p>
+                </div>
+                
+                <div class="tab-panel" id="meetings">
+                    <h2>Meeting Notes</h2>
+                    <p>Access past meeting minutes and upcoming meeting agendas.</p>
+                </div>
+                
+                <div class="tab-panel" id="training">
+                    <h2>Training Materials</h2>
+                    <p>Access training resources and educational materials.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
   <script type="module" src="../coderesources/js/password.js"></script>
+  <script type="module" src="../coderesources/js/tabs.js"></script>
 
    <!-- Footer Code -->
    <footer class="footer">
