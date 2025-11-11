@@ -464,3 +464,37 @@ body {
         padding: 1.5rem;
     }
 }
+
+/* Responsive Calendar Styles */
+.calendar-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.calendar-container iframe {
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    .calendar-container iframe {
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .calendar-container iframe {
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-container iframe {
+        min-height: 350px;
+    }
+}
