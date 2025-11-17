@@ -26,6 +26,38 @@
         input.setAttribute('aria-label', 'Member password');
     }
 
+    // Show/hide password toggle
+    const toggleBtn = document.getElementById('passwordToggle');
+    if (toggleBtn && input) {
+        toggleBtn.addEventListener('click', function (e) {
+            e.preventDefault(); // prevent accidental form submit
+            const isCurrentlyPassword = input.type === 'password';
+            // toggle input type
+            input.type = isCurrentlyPassword ? 'text' : 'password';
+            // update aria-pressed and aria-label
+            this.setAttribute('aria-pressed', String(isCurrentlyPassword));
+            this.setAttribute('aria-label', isCurrentlyPassword ? 'Hide password' : 'Show password');
+            // swap icon class (FontAwesome)
+            const icon = this.querySelector('i');
+            if (icon) {
+                if (isCurrentlyPassword) {
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                } else {
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                }
+            }
+            // micro animation: add a temporary class that triggers CSS scale/opacity transition
+            this.classList.add('pulse');
+            window.setTimeout(() => {
+                try { this.classList.remove('pulse'); } catch (e) { /* ignore */ }
+            }, 220);
+            // put focus back to the input for seamless typing
+            input.focus();
+        });
+    }
+
     function showError() {
         if (errorMessage) {
             errorMessage.style.display = 'block';

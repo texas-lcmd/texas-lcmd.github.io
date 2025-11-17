@@ -78,6 +78,66 @@ body {
     flex-wrap: nowrap;
 }
 
+/* Password field with toggle button (eye) */
+.password-field {
+    position: relative;
+    width: 100%;
+    max-width: 320px; /* matches input max-width */
+}
+
+.password-field input[type="password"],
+.password-field input[type="text"] {
+    width: 100%;
+    padding-right: 44px; /* space for the toggle button */
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.0);
+    border: none;
+    color: var(--text-color);
+    padding: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.12s ease, color 0.12s ease;
+}
+
+.password-toggle:hover {
+    background: rgba(189,114,74,0.06);
+}
+
+.password-toggle:focus {
+    outline: 2px solid rgba(189,114,74,0.18);
+    outline-offset: 2px;
+}
+
+/* subtle icon animation when toggling visibility */
+.password-toggle i {
+    transition: transform 160ms cubic-bezier(.2,.9,.2,1), opacity 160ms ease;
+    transform-origin: center;
+    display: inline-block; /* ensure transform behaves consistently */
+}
+
+.password-toggle.pulse i {
+    transform: scale(1.08);
+    opacity: 0.98;
+}
+
+/* accessible visually-hidden helper */
+.sr-only {
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+}
+
 #passwordPrompt input[type="password"] {
     width: 100%;
     max-width: 320px;
@@ -93,6 +153,29 @@ body {
 }
 
 #passwordPrompt input[type="password"]:focus {
+    box-shadow: 0 4px 12px rgba(189,114,74,0.12);
+    border-color: var(--primary-color);
+}
+
+/* Keep password input visuals identical when toggling type to avoid layout shifts */
+#passwordPrompt .password-field input,
+#passwordPrompt .password-field input[type="text"],
+#passwordPrompt .password-field input[type="password"] {
+    width: 100%;
+    max-width: 320px;
+    padding: 12px 14px; /* same vertical padding so height stays consistent */
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--secondary-color);
+    font-size: 1rem;
+    color: var(--text-color);
+    outline: none;
+    transition: box-shadow 0.15s ease, border-color 0.15s ease;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+#passwordPrompt .password-field input:focus {
     box-shadow: 0 4px 12px rgba(189,114,74,0.12);
     border-color: var(--primary-color);
 }
@@ -147,6 +230,23 @@ body {
 
     #passwordPrompt button[type="submit"] {
         width: 100%;
+    }
+}
+
+/* Small vertical nudge so the password input visually lines up with the submit button
+   on wider screens where the form is a single row. Tweak the value if needed. */
+@media (min-width: 481px) {
+    #passwordPrompt .password-field {
+        transform: translateY(3px);
+    }
+}
+
+/* Slightly raise the eye icon on wide screens to match the vertical center of the submit button.
+   This counteracts the input nudge so the glyph lines up visually with the button. */
+@media (min-width: 481px) {
+    #passwordPrompt .password-toggle {
+        /* move up a few pixels relative to exact center */
+        transform: translateY(calc(-50% - 3px));
     }
 }
 
