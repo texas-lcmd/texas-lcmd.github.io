@@ -20,10 +20,47 @@
 
     const correctPassword = decodeObf(_obf, _key);
 
+    // localStorage key and expiry (24 hours)
+    const STORAGE_KEY = 'lcmd_auth';
+    const AUTH_DURATION_MS = 8 * 60 * 60 * 1000; // 24 hours
+
+    function isAuthenticated() {
+        try {
+            const raw = localStorage.getItem(STORAGE_KEY);
+            if (!raw) return false;
+            const data = JSON.parse(raw);
+            return data && data.auth === true && Date.now() < data.expires;
+        } catch (e) {
+            return false;
+        }
+    }
+
+    function setAuthExpiry(hours = 24) {
+        const expires = Date.now() + (hours * 60 * 60 * 1000);
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({ auth: true, expires }));
+    }
+
+    function clearAuth() {
+        localStorage.removeItem(STORAGE_KEY);
+    }
+
     // Improve accessibility and UX
     if (input) {
         input.setAttribute('autocomplete', 'new-password');
         input.setAttribute('aria-label', 'Member password');
+    }
+
+    // If already authenticated and not expired, reveal immediately
+    if (isAuthenticated()) {
+        if (errorMessage) errorMessage.style.display = 'none';
+        if (passwordPrompt) passwordPrompt.style.display = 'none';
+        if (protectedContent) {
+            protectedContent.style.display = 'block';
+            protectedContent.classList.remove('hidden');
+            protectedContent.classList.add('reveal');
+        }
+        // nothing else to do
+        return;
     }
 
     // Show/hide password toggle
@@ -88,11 +125,15 @@
             const enteredPassword = input ? input.value : '';
             if (enteredPassword === correctPassword) {
                 if (errorMessage) errorMessage.style.display = 'none';
+                // persist auth for 24 hours
+                setAuthExpiry(24);
                 revealProtected();
             } else {
                 showError();
                 if (input) input.value = '';
                 if (input) input.focus();
+                // ensure no stale auth remains
+                clearAuth();
             }
         });
     }
