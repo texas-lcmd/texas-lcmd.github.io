@@ -103,9 +103,10 @@ body {
 
 .featured-content {
     display: grid;
-    grid-template-columns: 100px 1fr 200px;
+    grid-template-columns: 100px 1fr;
     gap: 3rem;
     align-items: center;
+    justify-items: center;
 }
 
 .featured-icon {
@@ -124,6 +125,7 @@ body {
     font-size: 2rem;
     margin-bottom: 1rem;
     font-weight: 700;
+    text-align: center;
 }
 
 .featured-text p {
@@ -284,19 +286,20 @@ body {
 
 .split-text h2 {
     color: var(--primary-color);
-    font-size: 2.2rem;
+    font-size: 2.75rem;
     margin-bottom: 1.5rem;
     font-weight: 700;
 }
 
 .split-text p {
     color: var(--text-color);
-    font-size: 1.05rem;
+    font-size: 1.4rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
 }
 
 .learn-more-link {
+    font-size: 1.4rem; /* Match font size of split-text p */
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
@@ -323,7 +326,7 @@ body {
 }
 
 .stat-box h3 {
-    font-size: 2.5rem;
+    font-size: 1.85rem;
     color: var(--primary-color);
     margin: 0 0 0.5rem 0;
     font-weight: 700;
@@ -339,13 +342,13 @@ body {
 .timeline-section {
     margin: 5rem 0;
     padding: 3rem;
-    background: rgba(189, 114, 74, 0.05);
+    background: var(--navbar-color);
     border-radius: 16px;
 }
 
 .timeline-section h2 {
     text-align: center;
-    color: var(--primary-color);
+    color: white;
     font-size: 2.2rem;
     margin-bottom: 3rem;
     font-weight: 700;
@@ -363,7 +366,7 @@ body {
     top: 0;
     bottom: 0;
     width: 3px;
-    background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(180deg, white, var(--bg-color));
     transform: translateX(-50%);
 }
 
@@ -387,7 +390,7 @@ body {
     text-align: right;
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: white;
     padding-right: 2rem;
 }
 
@@ -735,4 +738,24 @@ body {
     .legislative-container {
         padding: 0 1rem;
     }
+}
+
+.photo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+}
+
+.photo-item {
+    width: 28%; /* Adjust width for three equal items */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
