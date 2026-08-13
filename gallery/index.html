@@ -111,6 +111,7 @@
     <div class="banner">
         <h1>Gallery</h1>
     </div>
+    <section class="semester" data-semester="Fall 2025">
     <div class="label">
       <h2>Fall 2025</h2>
     </div>
@@ -245,7 +246,9 @@
           </div>
         </div>
     </main>
+    </section>
 
+    <section class="semester" data-semester="Spring 2025">
     <div class="label">
       <h2>Spring 2025</h2>
     </div>
@@ -312,9 +315,12 @@
         <!-- Code that allows entire image to fit in container -->
         <div id="image-modal" class="modal">
           <span class="close">&times;</span>
+          <a class="modal-prev" aria-label="Previous image">&#10094;</a>
+          <a class="modal-next" aria-label="Next image">&#10095;</a>
           <img id="modal-image" class="modal-content" alt="">
           <p id="modal-caption"></p>
         </div>
+    </section>
     </main>
     </div>
 
@@ -381,4 +387,5 @@
     }(jQuery));
     var $mcj = jQuery.noConflict(true);
   </script>
+  <script src="../coderesources/js/gallery-lightbox.js"></script>
 </body>
