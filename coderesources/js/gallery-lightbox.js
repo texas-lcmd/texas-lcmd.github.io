@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-image');
-    const modalCaption = document.getElementById('modal-caption');
     const closeBtn = modal.querySelector('.close');
     const prevBtn = modal.querySelector('.modal-prev');
     const nextBtn = modal.querySelector('.modal-next');
@@ -15,8 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const img = currentImages[currentIndex];
         modalImg.src = img.src;
         modalImg.alt = img.alt || '';
-        // Prefer an explicit data-caption; otherwise leave caption empty
-        modalCaption.textContent = img.dataset.caption || '';
+        // captions intentionally not shown
         modal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
     }
@@ -32,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const img = currentImages[currentIndex];
         modalImg.src = img.src;
         modalImg.alt = img.alt || '';
-        modalCaption.textContent = img.dataset.caption || '';
+        // captions intentionally not shown
     }
 
     // delegate images per semester
@@ -54,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // click outside image closes
     modal.addEventListener('click', (e) => {
-        if (e.target === modal || e.target === modalCaption) closeModal();
+        if (e.target === modal) closeModal();
     });
 
     // keyboard navigation
