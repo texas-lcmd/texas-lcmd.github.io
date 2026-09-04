@@ -1,7 +1,7 @@
 /* ---------- Base Variables & Global Styles ---------- */
 :root {
     --primary-color: #bd724a;
-    --secondary-color: #6c584c;
+    --secondary-color: #a85f3a;
     --text-color: #2e1f15;
     --bg-color: #f4e4d4;
     --navbar-color: #745644;
@@ -43,7 +43,6 @@ body {
     bottom: 8px;
 }
 
-/* ---------- Container ---------- */
 .legislative-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -54,7 +53,7 @@ body {
 .hero-section {
     margin: 4rem 0;
     padding: 4rem 3rem;
-    background: linear-gradient(135deg, rgba(189, 114, 74, 0.1), rgba(108, 88, 76, 0.05));
+    background: var(--accent-light);
     border-radius: 16px;
     text-align: center;
     border-left: 6px solid var(--primary-color);
@@ -78,18 +77,18 @@ body {
 .cta-button {
     display: inline-block;
     padding: 1rem 2.5rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: var(--primary-color);
     color: white;
     text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(189, 114, 74, 0.2);
+    box-shadow: 0 4px 12px rgba(189, 114, 74, 0.18);
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(189, 114, 74, 0.3);
+    box-shadow: 0 6px 20px rgba(189, 114, 74, 0.28);
 }
 
 /* ---------- Featured Initiative ---------- */
@@ -161,7 +160,7 @@ body {
 .visual-accent {
     width: 100%;
     height: 150px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: var(--primary-color);
     border-radius: 12px;
     opacity: 0.2;
 }
@@ -366,7 +365,7 @@ body {
     top: 0;
     bottom: 0;
     width: 3px;
-    background: linear-gradient(180deg, white, var(--bg-color));
+    background: white;
     transform: translateX(-50%);
 }
 
@@ -509,7 +508,7 @@ body {
 .final-cta {
     margin: 5rem 0;
     padding: 4rem 3rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: var(--primary-color);
     color: white;
     border-radius: 16px;
     text-align: center;
@@ -758,4 +757,56 @@ body {
     width: 28%; /* Adjust width for three equal items */
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Storybook Section ---------- */
+.storybook-section {
+    margin: 3rem 0;
+    padding: 2rem 2.5rem;
+    background: white;
+    border-radius: 12px;
+    border-left: 6px solid var(--primary-color);
+    box-shadow: 0 6px 18px rgba(189, 114, 74, 0.08);
+    text-align: center;
+}
+
+.storybook-section h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+    font-weight: 700;
+}
+
+.storybook-section p {
+    margin: 0.75rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.storybook-section .btn-primary {
+    background: var(--primary-color);
+    color: white;
+    border-color: transparent;
+}
+
+.storybook-section .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(189, 114, 74, 0.18);
+}
+
+.storybook-section .btn-secondary {
+    background: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .storybook-section {
+        padding: 1.25rem;
+    }
+    .storybook-section h2 {
+        font-size: 1.4rem;
+    }
 }
