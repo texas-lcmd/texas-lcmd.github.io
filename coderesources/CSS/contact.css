@@ -190,3 +190,45 @@ body {
     }
 
 }
+
+@media (max-width: 768px) {
+    .contact-form {
+        width: 90%;
+    }
+    
+    .contact-info {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .contact-us {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form {
+        width: 95%;
+        max-width: 100%;
+    }
+    
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        width: 100%;
+        padding: 12px;
+    }
+    
+    .contact-info h1 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-info p {
+        font-size: 0.95rem;
+    }
+    
+    .social-icons a {
+        font-size: 28px;
+        margin: 0 10px;
+    }
+}

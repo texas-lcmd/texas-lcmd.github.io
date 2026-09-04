@@ -1,0 +1,310 @@
+/* Comprehensive Mobile Responsive Styles for LCMD Website */
+
+/* Mobile-first approach for small screens */
+@media (max-width: 768px) {
+    /* General adjustments */
+    body {
+        font-size: 16px;
+    }
+    
+    /* Hero sections */
+    .hero-section, .hero-content {
+        padding: 1.5rem !important;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.6rem !important;
+    }
+    
+    .hero-content p {
+        font-size: 0.95rem !important;
+    }
+    
+    /* Buttons */
+    .btn-primary, .btn-secondary, .cta-button {
+        padding: 0.9rem 1.5rem !important;
+        font-size: 1rem !important;
+    }
+    
+    .cta-button-group {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+    
+    /* Containers */
+    .legislative-container, .site-container {
+        padding: 0 1rem !important;
+    }
+    
+    /* Sections */
+    .split-section {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+    
+    .split-stats {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+    
+    .stat-box {
+        padding: 1.5rem 1rem !important;
+    }
+    
+    /* Photo sections */
+    .photo-container {
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+    }
+    
+    .photo-item {
+        width: 100% !important;
+        max-width: 400px !important;
+        margin: 0 auto !important;
+    }
+    
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    /* Forms */
+    .contact-form, .contact-info {
+        max-width: 100% !important;
+    }
+    
+    .contact-us {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    .contact-info {
+        margin-right: 0 !important;
+        margin-bottom: 20px !important;
+    }
+    
+    /* Footer */
+    .footer-content {
+        flex-direction: column !important;
+        padding: 2rem 1rem !important;
+    }
+    
+    .newsletter {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small screens */
+    html, body {
+        font-size: 14px;
+    }
+    
+    /* Headings */
+    h1 {
+        font-size: 1.5rem !important;
+    }
+    
+    h2 {
+        font-size: 1.3rem !important;
+    }
+    
+    h3 {
+        font-size: 1.1rem !important;
+    }
+    
+    /* Hero content */
+    .hero-section {
+        padding: 1rem !important;
+        margin: 1rem 0 !important;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.4rem !important;
+    }
+    
+    .hero-content p {
+        font-size: 0.9rem !important;
+    }
+    
+    /* Buttons */
+    .btn-primary, .btn-secondary, .cta-button {
+        padding: 0.8rem 1rem !important;
+        font-size: 0.95rem !important;
+    }
+    
+    .learnbutton {
+        padding: 0.8rem 1.2rem !important;
+        font-size: 0.95rem !important;
+    }
+    
+    /* Gallery grid */
+    .gallery-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0.75rem !important;
+    }
+    
+    /* Modals */
+    .modal-content {
+        max-width: 100% !important;
+        max-height: 85vh !important;
+    }
+    
+    .modal-prev, .modal-next {
+        font-size: 24px !important;
+        padding: 4px 8px !important;
+    }
+    
+    .modal .close {
+        font-size: 24px !important;
+        top: 10px !important;
+        right: 10px !important;
+    }
+    
+    /* Officer cards */
+    .officer-card {
+        flex: 1 1 120px !important;
+        padding: 10px !important;
+        min-width: 110px !important;
+    }
+    
+    .officer-photo {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    
+    .officer-card h3 {
+        font-size: 0.9rem !important;
+        margin-top: 8px !important;
+    }
+    
+    .officer-card p {
+        font-size: 0.8rem !important;
+        margin: 3px 0 !important;
+    }
+    
+    /* Contact form */
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        width: 100% !important;
+        padding: 12px !important;
+        font-size: 16px !important; /* Prevents zoom on mobile */
+    }
+    
+    /* Password prompt */
+    #passwordPrompt {
+        max-width: 95% !important;
+        padding: 20px 15px !important;
+        margin: 15px auto !important;
+    }
+    
+    #passwordPrompt h2 {
+        font-size: 1rem !important;
+    }
+    
+    .password-field input {
+        font-size: 16px !important; /* Prevents zoom on mobile */
+    }
+    
+    /* Newsletter section */
+    .newsletter {
+        padding: 1.5rem 1rem !important;
+    }
+    
+    .newsletter-title {
+        font-size: 1.2rem !important;
+    }
+    
+    .email-input {
+        flex-direction: column !important;
+        gap: 0.75rem !important;
+    }
+    
+    .email-input input {
+        width: 100% !important;
+        font-size: 16px !important;
+    }
+    
+    .email-input button {
+        width: 100% !important;
+    }
+    
+    /* Timeline */
+    .timeline-item {
+        grid-template-columns: 60px 1fr !important;
+        gap: 1rem !important;
+    }
+    
+    .timeline-marker {
+        font-size: 1rem !important;
+    }
+    
+    /* Stat boxes */
+    .stat-box {
+        padding: 1rem !important;
+    }
+    
+    .stat-box h3 {
+        font-size: 1rem !important;
+    }
+    
+    /* Photo items */
+    .photo-item {
+        max-width: 100% !important;
+    }
+    
+    /* Banner text */
+    .banner {
+        font-size: 1.2rem !important;
+        padding: 10px !important;
+    }
+    
+    /* Split section */
+    .split-text h2 {
+        font-size: 1.3rem !important;
+    }
+    
+    .split-text p {
+        font-size: 1rem !important;
+    }
+    
+    /* Final CTA */
+    .final-cta {
+        padding: 1.5rem 1rem !important;
+    }
+    
+    .final-cta h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    .final-cta p {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Very small devices (under 380px) */
+@media (max-width: 379px) {
+    .hero-content h2 {
+        font-size: 1.2rem !important;
+    }
+    
+    .btn-primary, .btn-secondary {
+        padding: 0.7rem 0.8rem !important;
+        font-size: 0.9rem !important;
+    }
+    
+    h1 {
+        font-size: 1.3rem !important;
+    }
+    
+    h2 {
+        font-size: 1.1rem !important;
+    }
+}
