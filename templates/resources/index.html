@@ -237,28 +237,48 @@
 </div>
 
   <!-- Footer Code -->
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="newsletter">
-        <h2 class="newsletter-title">Subscribe to our newsletter.</h2>
-        <div id="mc_embed_shell" class="email-input">
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__col site-footer__about">
+        <a href="/" class="site-footer__logo"><img src="/coderesources/images/WHITELCMDLOGO.png" alt="LCMD Logo"></a>
+        <div class="site-footer__brand">Longhorns Crushing Medical Debt</div>
+        <p>A student organization at The University of Texas at Austin working to relieve medical debt and advocate for a more affordable health care system.</p>
+        <div class="site-footer__social">
+          <a href="https://www.instagram.com/texas_lcmd/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="mailto:texas.lcmd@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <nav class="site-footer__col" aria-label="Footer">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/memberresources/">Member Resources</a></li>
+          <li><a href="/legislativeaction/">Legislative Action</a></li>
+          <li><a href="/gallery/">Gallery</a></li>
+          <li><a href="/calendar/">Calendar</a></li>
+          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSetebTobZBy2C8QYlhJnQDZLHvb17z4R3TwwuVE6NDPvPgE9A/viewform?usp=sf_link" target="_blank" rel="noopener">Join</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="site-footer__col site-footer__newsletter">
+        <h3>Stay Informed</h3>
+        <p>Subscribe for updates on events, campaigns, and ways to get involved.</p>
+        <div id="mc_embed_shell">
           <div id="mc_embed_signup">
-              <!-- Remove inline styles from the input -->
             <form action="https://texasdollarfor.us18.list-manage.com/subscribe/post?u=05de59b78daa0dab3353ee611&amp;id=8fc51d2f0b&amp;f_id=0065a8e6f0"
             method="post"
             id="mc-embedded-subscribe-form"
             name="mc-embedded-subscribe-form"
             class="validate"
-            target="_blank"
-            style="background: transparent;">
+            target="_blank">
             <div id="mc_embed_signup_scroll">
-              <div class="mc-field-group" style="margin-bottom: 15px;">
+              <div class="mc-field-group">
                 <input type="email"
                   name="EMAIL"
                   class="required email"
                   id="mce-EMAIL"
                   required
-                  placeholder="Enter your email">
+                  placeholder="Email address" aria-label="Email address">
               </div>
               <div hidden="">
                 <input type="hidden" name="tags" value="3021154">
@@ -275,17 +295,21 @@
                   <button type="submit"
                     name="subscribe"
                     id="mc-embedded-subscribe"
-                    class="learnbutton">
+                    class="footer-submit">
                     Subscribe <i class="fa-solid fa-arrow-right"></i>
                   </button>
                 </div>
               </div>
             </div>
             </form>
-            </div>
           </div>
         </div>
       </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>&copy; <script>document.write(new Date().getFullYear())</script> Longhorns Crushing Medical Debt. All rights reserved.</span>
+      <span>The University of Texas at Austin &middot; <a href="mailto:texas.lcmd@gmail.com">texas.lcmd@gmail.com</a></span>
+    </div>
   </footer>
 
   <!-- Load Mailchimp validation script (ensure jQuery is loaded first) -->
