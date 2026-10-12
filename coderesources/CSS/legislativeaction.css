@@ -10,7 +10,7 @@
 
 body {
     background-color: var(--bg-color);
-    font-family: 'Host Grotesk', sans-serif;
+    font-family: var(--font-body);
 }
 
 /* ---------- Banner ---------- */
@@ -21,7 +21,7 @@ body {
     font-size: 1.5rem;
     text-align: center;
     padding: 15px;
-    font-family: 'Oswald', sans-serif !important;
+    font-family: var(--font-heading) !important;
     position: relative;
 }
 
@@ -698,7 +698,7 @@ body {
     }
 
     .split-stats {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
 

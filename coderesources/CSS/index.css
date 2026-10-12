@@ -12,7 +12,7 @@
   }
   
   body {
-    font-family: sans-serif;
+    font-family: var(--font-body);
     margin: 0;
     padding: 0;
     background-color: var(--accent-bg);
@@ -28,7 +28,7 @@
   font-size: 1.75rem;
   text-align: center;
   padding: 20px;
-  font-family: 'Oswald', sans-serif !important;
+  font-family: var(--font-heading) !important;
   position: relative;
 }
 

@@ -22,7 +22,27 @@
     box-sizing: border-box;
     margin: 0;
     Padding: 0;
-    font-family: 'Host Grotesk', Courier, monospace;
+    font-family: inherit;
+}
+
+/* Site-wide typography: sans body, serif headings */
+:root {
+    --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    --font-heading: 'Source Serif 4', Georgia, serif;
+}
+
+/* Canvas color shown when scrolling/overscrolling past the page; set on html so
+   every page matches the navbar brown regardless of its body background */
+html {
+    background-color: var(--accent-bg);
+}
+
+body {
+    font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, .banner {
+    font-family: var(--font-heading);
 }
 
 /* Utility container (renamed to avoid overriding page-specific .container) */

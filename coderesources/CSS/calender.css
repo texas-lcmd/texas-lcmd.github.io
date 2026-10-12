@@ -12,7 +12,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Host Grotesk', Courier, monospace;
+    font-family: inherit;
 }
 /* -------------------- */
 body {
@@ -29,7 +29,7 @@ body {
     font-size: 1.5rem; /* Slightly smaller than index page */
     text-align: center;
     padding: 15px; /* Slightly smaller padding */
-    font-family: 'Oswald', sans-serif !important;
+    font-family: var(--font-heading) !important;
     position: relative;
 }
 
